@@ -1,5 +1,5 @@
 version: '2'
 
 services:
-  face-mask detection:
+  face-mask-detection:
     build: .
