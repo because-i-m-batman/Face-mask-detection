@@ -12,6 +12,8 @@ RUN apt-get update \
   && pip3 --no-cache-dir install --upgrade pip \
   && rm -rf /var/lib/apt/lists/*
 
+
+
 RUN apt update
 RUN apt-get install -y python3-opencv
 RUN pip3 install flask opencv-python
