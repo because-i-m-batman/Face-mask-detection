@@ -12,9 +12,10 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 RUN apt update
+RUN apt-get install -y python3-opencv
 RUN pip3 install flask opencv-python
 RUN pip3 install --upgrade tensorflow
-RUN apt-get install ffmpeg libsm6 libxext6  -y
+
 
 
 
