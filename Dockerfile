@@ -13,4 +13,5 @@ RUN apt-get update \
 
 RUN apt update
 RUN pip3 install --upgrade tensorflow
+RUN pip3 install flask opencv-python
 
