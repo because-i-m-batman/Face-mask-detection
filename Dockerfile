@@ -12,8 +12,9 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 RUN apt update
-RUN apt-get install libgl1-mesa-glx
-RUN pip3 install --upgrade tensorflow
 RUN pip3 install flask opencv-python
+RUN pip3 install --upgrade tensorflow
+RUN apt-get install ffmpeg libsm6 libxext6  -y
+
 
 
