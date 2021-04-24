@@ -1,4 +1,5 @@
 from ubuntu:latest
+ARG DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /src
 
