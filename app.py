@@ -1,4 +1,4 @@
-from flask import Flask,jsonify,request
+from flask import Flask,jsonify,request,send_file
 from face_mask_detector import Face_Mask_Detection
 import cv2
 import numpy
@@ -15,7 +15,7 @@ def run_detection():
 	print(input_image)
 	output_image = detector_object.run_face_mask_detection(input_image)
 	print('[INFO] Detection Successfully Done.')
-	return output_image
+	return send_file(output_image,mimetype='image/gif')
 
 if __name__ == '__main__':
     app.run(host = "0.0.0.0",port = 5001)
