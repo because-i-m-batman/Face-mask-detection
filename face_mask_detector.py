@@ -20,7 +20,7 @@ class Face_Mask_Detection:
 
 
 		
-		image = cv2.imread(image)
+		# image = cv2.imread(image)
 		(h, w) = image.shape[:2]
 		blob = cv2.dnn.blobFromImage(image, 1.0, (300, 300), (104.0, 177.0, 123.0))
 
