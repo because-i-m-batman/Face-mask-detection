@@ -15,7 +15,7 @@ def run_detection():
 	print(input_image)
 	output_image = detector_object.run_face_mask_detection(input_image)
 	print('[INFO] Detection Successfully Done.')
-	return "file sent"
+	return output_image
 
 if __name__ == '__main__':
     app.run(host = "0.0.0.0",port = 5001)

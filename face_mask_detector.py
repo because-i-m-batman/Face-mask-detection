@@ -68,8 +68,8 @@ class Face_Mask_Detection:
 				cv2.putText(image, label, (startX, startY - 10),cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 2)
 				cv2.rectangle(image, (startX, startY), (endX, endY), color, 2)
 
-		cv2.imwrite('out.jpg',image)
-		print('Count ', count)
+		# cv2.imwrite('out.jpg',image)
+		# print('Count ', count)
 		image = cv2.cvtColor(image,cv2.COLOR_BGR2RGB)
 
 		return image
