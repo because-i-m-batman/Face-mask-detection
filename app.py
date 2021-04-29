@@ -4,6 +4,7 @@ import cv2
 import numpy
 
 app = Flask(__name__)
+detector_object = Face_Mask_Detection()
 
 @app.route('/send_input', methods=['POST'])
 def run_detection():
@@ -11,7 +12,8 @@ def run_detection():
 	file = request.files.get("image","")
 	print('[INFO] Running Face Mask Detection.')
 	input_image = cv2.imdecode(numpy.fromstring(file.read(), numpy.uint8), cv2.IMREAD_UNCHANGED)
-	output_image = Face_Mask_Detection.run_face_mask_detection(input_image)
+	print(input_image)
+	output_image = detector_object.run_face_mask_detection(input_image)
 	print('[INFO] Detection Successfully Done.')
 	return "file sent"
 
