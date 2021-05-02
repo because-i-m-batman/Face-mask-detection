@@ -9,7 +9,7 @@
 2. Run this Command on Terminal 1 or your host machine: 
 
 ```
-	docker-compose up 
+docker-compose up 
 ```
 
 3. Send post request (send images as to the model):
