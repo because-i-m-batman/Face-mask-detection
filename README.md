@@ -12,12 +12,15 @@
 3. Send post request (send images as to the model):
 
 a. Open another Terminal and run this following command to send the image to the model
+
 	import requests
 	url = 'where you want to host the app'(for local machine <localhost:5001/send_input>)
 	files = {'image': open('<input-image-path>', 'rb')}
 	resp = requests.post(url, files=files)
 
+
 b. convert json response to image array ,after above commands use these commands:
+
 	import json
 	import numpy as np
 	json_load = json.loads(resp.text)
