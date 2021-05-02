@@ -1,6 +1,27 @@
 # Face-mask-detection
 
-run face_mask_detector.py file it will detect faces and also detects whether that person is wearing mask or not
+## How to Run
+
+1. Prerequisites:
+-	Installed Docker
+-	Installed Docker-compose
+
+2. Run this Command: 
+-	docker-compose up (It will pull run the dockerfile and build the image and create the container)
+
+3. Send post request (send images as to the model):
+
+a. Open Terminal and run this following command to send the image to the model
+	import requests
+	url = 'where you want to host the app'(for local machine <localhost:5001/send_input>)
+	files = {'image': open('<input-image-path>', 'rb')}
+	resp = requests.post(url, files=files)
+
+b. convert json response to image array ,after above commands use these commands:
+	import json
+	import numpy as np
+	json_load = json.loads(resp.text)
+	output_image_array = np.asarray(json_load["output_image"])
 
 # output
 
