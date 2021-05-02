@@ -7,7 +7,9 @@
 -	Installed Docker-compose
 
 2. Run this Command on Terminal 1 or your host machine: 
--	docker-compose up (It will pull run the dockerfile and build the image and create the container)
+-      (It will pull run the dockerfile and build the image and create the container)
+
+	docker-compose up 
 
 3. Send post request (send images as to the model):
 
